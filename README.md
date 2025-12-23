@@ -1,4 +1,13 @@
-# 🧙 Merge tactics teambuilder️
+# ༼ つ ◕_◕ ༽つ Merge tactics teambuilder️
+
+
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-21-blue" alt="Java Version" />
+  <img src="https://img.shields.io/badge/Tests-JUnit%204-blue" alt="Tests" />
+  <img src="https://img.shields.io/badge/Tests%20Passed-Passing-brightgreen" alt="Tests Passed" />
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="License" />
+</p>
 
 ---
 
@@ -28,10 +37,69 @@ worst possible, if all the buffs are good then it is a "buffed" team. (●'◡'�
 Just clone the repo and run the `Main`, then run the `TeamAdvisor` and that's it!
 
 ---
+## (☞ﾟヮﾟ)☞  Project Structure
+
+    src
+    └─── main
+         └── java
+              ├── Main.java              # Entry point – buffed team generation
+              ├── TeamAdvisor.java       # Team filtering reading
+              ├── Utilities.java         # Helper with utility method
+              └── entities
+                  ├── Card.java          # Card definition and logic
+                  ├── Clans.java         # Clan/trait enum
+                  ├── ExistingCards.java # Predefined cards enum
+                  └── Team.java          # Team definition and logic
+       
+
+    resources
+    └── teams.txt              # Generated teams by the Main
+
+    test
+    └── main
+        └── java
+            └── entities
+                ├── MyCardTest.java    # Unit tests for Card
+                └── MyTeamTest.java    # Unit tests for Team
+
+---
+## (╯°□°）╯︵ ┻━┻ Example usage and its output
+When the pre-existent cards are **Bandit** and **Executioner**: 
+
+    What is the next preexistent card in the Team?
+    Bandit
+
+    Do you still have another preexistant card  ? 0 = No - 1 = Yes
+    1
+
+    What is the next preexistent card in the Team?
+    Executioner
+
+    Do you still have another preexistant card  ? 0 = No - 1 = Yes
+    0
+
+    Preexistant cards were entered, let's find some teams:
+    [Bandit, Executioner, Archer queen, Wizard, Goblin, Dart goblin]
+    [Bandit, Executioner, Archer queen, Wizard, Royal ghost, Skeleton dragon]
+    [Bandit, Executioner, Barbarian, Wizard, Golden knight, Prince]
+    [Bandit, Executioner, Valkyrie, Wizard, Goblin, Goblin machine]
+    [Bandit, Executioner, Valkyrie, Wizard, Royal ghost, Skeleton king]
+    [Bandit, Executioner, Spear goblin, Goblin machine, Royal ghost, Skeleton king]
+    [Bandit, Executioner, Spear goblin, Dart goblin, Royal ghost, Skeleton dragon]
+    [Bandit, Executioner, Musketeer, Princess, Royal ghost, Witch]
+
+
+---
 ##  (┬┬﹏┬┬) Tests
 I provided some basic tests in the test directory for `Card` and `Team` classes just to be sure their
 instantiation was good as well as the `equals` method but for the main code of generating the teams
 and reading them in the files, the only test was to try it and verify by hand (•_•). 
+
+    ⚠️ Performance Note
+    One of the tests in `MyTeamTest` is a real **BRUTEFORCE** trying all the combinations possible for
+    every card with also some repetitions (`constructor_throws_exception`), so, that test may take 10-20 
+    minutes to finish (⊙_⊙;).
+
 
 ---
 ## 🔄 Make it your own and update it
