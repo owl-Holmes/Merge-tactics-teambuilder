@@ -25,7 +25,13 @@ worst possible, if all the buffs are good then it is a "buffed" team. (●'◡'�
 
 ---
 ##  ༼ つ ◕_◕ ༽つ Usage
-Just clone the repo and run the `Main`, then run the `TeamAdvisor` and that's it.
+Just clone the repo and run the `Main`, then run the `TeamAdvisor` and that's it!
+
+---
+##  (┬┬﹏┬┬) Tests
+I provided some basic tests in the test directory for `Card` and `Team` classes just to be sure their
+instantiation was good as well as the `equals` method but for the main code of generating the teams
+and reading them in the files, the only test was to try it and verify by hand (•_•). 
 
 ---
 ## 🔄 Make it your own and update it
